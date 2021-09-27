@@ -79,7 +79,7 @@ if(monthNum==1){
     monthName="December";
   }
   var month=date.getDate()+monthName;
-//  yesName.innerHTML=today;
+ yesName.innerHTML=today;
  yesDate.innerHTML=month;
  todayName.innerHTML=day2;
  tomName.innerHTML=day3;
@@ -112,7 +112,7 @@ async function todayandtomandaftertom(klma){
   data=await data.json();
   //////////////////////start of toDay Data////////////////////////
 //  let arrtoday=data.forecast.forecastday[0].hour;
-  let toText=data.current.temp_c;
+  let toText=data.current.condition.text;
   let todMaxTem= data.current.temp_c;
   let todMaxWind= data.current.wind_kph;
   let todWillRain=data.forecast.forecastday[0].day.daily_chance_of_rain;
@@ -149,8 +149,8 @@ async function todayandtomandaftertom(klma){
   }
  }
  //cdn.weatherapi.com/weather/64x64/day/116.png
-//  yesName.innerHTML=`<img src="weather/64x64/${file}/${toiconNum}.png">`
-// yesName.innerHTML=`<img src="${hager}">`
+//  ic.innerHTML=`<img src="weather/64x64/${file}/${toiconNum}.png">`
+// yesName.innerHTML=`<img src="${//cdn.weatherapi.com/weather/64x64/day/116.png}">`
 ////////////////////End of Today Data////////////////////////////////////////////////
 
 
@@ -217,6 +217,9 @@ tomIcon1.setAttribute("src",`weather/64x64/day/${toiconNum1}.png`);
     alertSearchInput.classList.remove("d-none");
  
   }
+  // cityName.innerHTML= `<img src="https:${data.forecast.forecastday[1].day.condition.icon}">`
+
+  // console.log(data.forecast.forecastday[1].day.condition.icon);
 }
   
 todayandtomandaftertom("cai");
@@ -224,3 +227,4 @@ todayandtomandaftertom("cai");
 searchInput.addEventListener("keyup",function(){
   todayandtomandaftertom(searchInput.value);
 })
+
