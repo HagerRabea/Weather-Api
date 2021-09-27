@@ -210,7 +210,10 @@ tomIcon1.setAttribute("src",`weather/64x64/day/${toiconNum1}.png`);
  ftomMax2.innerHTML=afTomMaxTem;
  ftomMinx2.innerHTML=afTomMinTem;
  ftomText2.innerHTML=afTomText;
-  }else if(data.ok!=true&&alertSearchInput.value!=""){
+  }else if(alertSearchInput.value!=""){
+    alertSearchInput.classList.add("d-none");
+  }
+  else if(data.ok!=true&&alertSearchInput.value!=""){
     alertSearchInput.classList.remove("d-none");
  
   }
