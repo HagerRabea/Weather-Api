@@ -210,15 +210,14 @@ tomIcon1.setAttribute("src",`weather/64x64/day/${toiconNum1}.png`);
  ftomMax2.innerHTML=afTomMaxTem;
  ftomMinx2.innerHTML=afTomMinTem;
  ftomText2.innerHTML=afTomText;
-  }else if(alertSearchInput.value!=""){
+  }else if(searchInput.value==""){
     alertSearchInput.classList.add("d-none");
   }
-  else if(data.ok!=true&&alertSearchInput.value!=""){
+  else if(data.ok!=true&&searchInput.value!=""){
     alertSearchInput.classList.remove("d-none");
  
   }
   // cityName.innerHTML= `<img src="https:${data.forecast.forecastday[1].day.condition.icon}">`
-
   // console.log(data.forecast.forecastday[1].day.condition.icon);
 }
   
@@ -228,3 +227,8 @@ searchInput.addEventListener("keyup",function(){
   todayandtomandaftertom(searchInput.value);
 })
 
+// function sub(x,y){
+//   if(x>y){
+
+//   }
+// }
