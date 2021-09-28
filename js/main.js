@@ -105,7 +105,7 @@ if(monthNum==1){
 
 async function todayandtomandaftertom(klma){
  
-  var  data=await fetch(`http://api.weatherapi.com/v1/forecast.json?key=b7a95557a39f495f9da12349212609&q=${klma}&days=3`);
+  var  data=await fetch(`https://api.weatherapi.com/v1/forecast.json?key=b7a95557a39f495f9da12349212609&q=${klma}&days=3`);
   console.log(data);
   if(data.ok==true){
     alertSearchInput.classList.add("d-none");
@@ -210,7 +210,7 @@ tomIcon1.setAttribute("src",`weather/64x64/day/${toiconNum1}.png`);
  ftomMax2.innerHTML=afTomMaxTem;
  ftomMinx2.innerHTML=afTomMinTem;
  ftomText2.innerHTML=afTomText;
-  }else if(searchInput.value==""){
+  }else if(searchInput.value!=""){
     alertSearchInput.classList.add("d-none");
   }
   else if(data.ok!=true&&searchInput.value!=""){
@@ -227,8 +227,3 @@ searchInput.addEventListener("keyup",function(){
   todayandtomandaftertom(searchInput.value);
 })
 
-// function sub(x,y){
-//   if(x>y){
-
-//   }
-// }
