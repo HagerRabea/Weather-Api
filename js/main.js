@@ -105,7 +105,7 @@ if(monthNum==1){
 
 async function todayandtomandaftertom(klma){
  
-  var  data=await fetch(`http://api.weatherapi.com/v1/forecast.json?key=b7a95557a39f495f9da12349212609&q=${klma}&days=3`);
+  var  data=await fetch(`https://api.weatherapi.com/v1/forecast.json?key=b7a95557a39f495f9da12349212609&q=${klma}&days=3`);
   
   console.log(data);
   if(data.ok==true){
